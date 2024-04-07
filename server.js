@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Route to handle form submission
-app.post("/send-email", (req, res) => {
+app.post("https://portfolio-website-1-ielg.onrender.com/send-email", (req, res) => {
     const { subject, content, email } = req.body;
 
     // Email options
