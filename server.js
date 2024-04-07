@@ -15,13 +15,20 @@ require('dotenv').config()
 
 // Nodemailer transporter
 const transporter = nodemailer.createTransport({
-    service: "Gmail",
+    service: "gmail",
+    host: 'smtp.gmail.com',
+    tls: {
+        ciphers: "SSLv3",
+    },
+    port: 587,
+    secure: false,
     auth: {
         user: process.env.REACT_APP_EMAIL,
         pass: process.env.REACT_APP_PASSWORD,
     },
     debug: true,
 });
+
 
 // Route to handle form submission
 app.post("/send-email", async (req, res) => {
