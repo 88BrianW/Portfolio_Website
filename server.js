@@ -23,21 +23,23 @@ const transporter = nodemailer.createTransport({
     debug: true,
 });
 
-await new Promise((resolve, reject) => {
-    // verify connection configuration
-    transporter.verify(function (error, success) {
-        if (error) {
-            console.log(error);
-            reject(error);
-        } else {
-            console.log("Server is ready to take our messages");
-            resolve(success);
-        }
-    });
-});
-
 // Route to handle form submission
 app.post("/send-email", async (req, res) => {
+
+    await new Promise((resolve, reject) => {
+        // verify connection configuration
+        transporter.verify(function (error, success) {
+            if (error) {
+                console.log(error);
+                reject(error);
+            } else {
+                console.log("Server is ready to take our messages");
+                resolve(success);
+            }
+        });
+    });
+
+    
     const { subject, content, email } = req.body;
 
     // Email options
