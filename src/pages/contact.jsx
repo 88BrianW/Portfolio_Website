@@ -63,7 +63,7 @@ const Contact = () => {
 		console.log(JSON.stringify(formData));
 	
 		try {
-			const response = await fetch("https://portfolio-website-1-ielg.onrender.com/contact/send-email", {
+			const response = await fetch("https://portfolio-website-1-ielg.onrender.com/send-email", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
