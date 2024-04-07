@@ -18,6 +18,7 @@ const transporter = nodemailer.createTransport({
         user: "portfolioprojectbrian@gmail.com",
         pass: "bgzxedsyohruczlm",
     },
+    debug: true,
 });
 
 // Route to handle form submission
