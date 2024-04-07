@@ -35,6 +35,8 @@ app.post("/send-email", (req, res) => {
         text: `Content: ${content}\n\nSubmitted by: ${email}`,
     };
 
+    console.log("trying to submit email...")
+
     // Sending email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
@@ -45,6 +47,8 @@ app.post("/send-email", (req, res) => {
             return res.status(200).json({ success: true, message: "Email sent successfully" });
         }
     });
+
+    console.log("submitted!")
 });
 
 
