@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -21,6 +21,19 @@ const transporter = nodemailer.createTransport({
         pass: process.env.REACT_APP_PASSWORD,
     },
     debug: true,
+});
+
+await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+        if (error) {
+            console.log(error);
+            reject(error);
+        } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+        }
+    });
 });
 
 // Route to handle form submission
