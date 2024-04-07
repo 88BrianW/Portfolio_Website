@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Route to handle form submission
-app.post("/send-email", (req, res) => {
+app.post("/send-email", async (req, res) => {
     const { subject, content, email } = req.body;
 
     // Email options
@@ -38,15 +38,21 @@ app.post("/send-email", (req, res) => {
     console.log("trying to submit email...")
 
     // Sending email
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            return res.status(500).json({ success: false, message: "Error sending email" });
-        } else {
-            console.log("Email sent: " + info.response);
-            return res.status(200).json({ success: true, message: "Email sent successfully" });
-        }
+    await new Promise((resolve, reject) => {
+        // send mail
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error(error);
+                reject(info);
+                return res.status(500).json({ success: false, message: "Error sending email" });
+            } else {
+                console.log("Email sent: " + info.response);
+                resolve(info);
+                return res.status(200).json({ success: true, message: "Email sent successfully" });
+            }
+        });
     });
+    
 
     console.log("submitted!")
 });
