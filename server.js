@@ -16,13 +16,12 @@ const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
         user: "portfolioprojectbrian@gmail.com",
-        pass: "bgzx edsy ohru czlm",
+        pass: "bgzxedsyohruczlm",
     },
 });
 
 // Route to handle form submission
 app.post("/send-email", (req, res) => {
-    console.log("ss");
     const { subject, content, email } = req.body;
 
     // Email options
@@ -37,13 +36,14 @@ app.post("/send-email", (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
-            res.status(500).json({ success: false, message: "Error sending email" });
+            return res.status(500).json({ success: false, message: "Error sending email" });
         } else {
             console.log("Email sent: " + info.response);
-            res.status(200).json({ success: true, message: "Email sent successfully" });
+            return res.status(200).json({ success: true, message: "Email sent successfully" });
         }
     });
 });
+
 
 // Start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
