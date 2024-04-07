@@ -7,6 +7,8 @@ import Contact from "./pages/contact";
 import Notfound from "./pages/404";
 import "./app.css";
 
+
+/* constructor */
 function App() {
 
 	return (

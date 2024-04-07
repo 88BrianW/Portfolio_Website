@@ -1,18 +1,14 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faFaceSadTear } from "@fortawesome/free-regular-svg-icons";
-
 import NavBar from "../components/common/navBar";
 import Logo from "../components/common/logo";
-
 import INFO from "../data/user";
-
 import "./styles/404.css";
 
 const Notfound = () => {
 	useEffect(() => {
-		document.title = `404 | ${INFO.main.title}`;
+		document.title = `404`;
 	}, []);
 
 	return (

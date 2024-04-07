@@ -18,7 +18,7 @@
 }
 
 .page-content {
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	position: relative;
 }
 
@@ -29,8 +29,8 @@
 	top: 0;
 	bottom: 0;
 	width: calc((100% - 1200px) / 2);
-	background-color: #fafafa;
-	border: 1px solid #f4f4f5;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(255, 255, 255);
 }
 
 .page-content:before {

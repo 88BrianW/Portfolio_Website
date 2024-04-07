@@ -6,9 +6,6 @@ import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import AllProjects from "../components/projects/allProjects";
 
-import INFO from "../data/user";
-import SEO from "../data/seo";
-
 import "./styles/projects.css";
 
 const Projects = () => {
@@ -16,17 +13,10 @@ const Projects = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const currentSEO = SEO.find((item) => item.page === "projects");
-
 	return (
 		<React.Fragment>
 			<Helmet>
-				<title>{`Projects | ${INFO.main.title}`}</title>
-				<meta name="description" content={currentSEO.description} />
-				<meta
-					name="keywords"
-					content={currentSEO.keywords.join(", ")}
-				/>
+				<title>Brian's Projects</title>
 			</Helmet>
 
 			<div className="page-content">
@@ -39,21 +29,11 @@ const Projects = () => {
 					</div>
 					<div className="projects-container">
 						<div className="title projects-title">
-							Things I’ve made trying to put my dent in the
-							universe.
+							7 of my Passion Projects
 						</div>
 
 						<div className="subtitle projects-subtitle">
-							I've worked on a variety of projects over the years
-							and I'm proud of the progress I've made. Many of
-							these projects are open-source and available for
-							others to explore and contribute to. If you're
-							interested in any of the projects I've worked on,
-							please feel free to check out the code and suggest
-							any improvements or enhancements you might have in
-							mind. Collaborating with others is a great way to
-							learn and grow, and I'm always open to new ideas and
-							feedback.
+							As a high schooler, I haven't had the time necessary to create all the projects that I've aspired to make. However, with the given time that I do have, I decided to focus my passions on the field of Computer Science, whether it be a video game, a data science project, or a mobile app. While I adventure through the universe of programming, more and more projects will be added. The projects listed are truly what I've poured my heart and soul into, starting from the most beginner skill level to now, an advanced skill level. I hope you enjoy looking at them.
 						</div>
 
 						<div className="projects-list">
