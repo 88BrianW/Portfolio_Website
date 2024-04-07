@@ -11,24 +11,26 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+require('dotenv').config()
+
 // Nodemailer transporter
 const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-        user: "portfolioprojectbrian@gmail.com",
-        pass: "bgzxedsyohruczlm",
+        user: process.env.REACT_APP_EMAIL,
+        pass: process.env.REACT_APP_PASSWORD,
     },
     debug: true,
 });
 
 // Route to handle form submission
-app.post("https://portfolio-website-1-ielg.onrender.com/send-email", (req, res) => {
+app.post("/send-email", (req, res) => {
     const { subject, content, email } = req.body;
 
     // Email options
     const mailOptions = {
-        from: "portfolioprojectbrian@gmail.com",
-        to: "portfolioprojectbrian@gmail.com",
+        from: process.env.REACT_APP_EMAIL,
+        to: process.env.REACT_APP_EMAIL,
         subject: subject,
         text: `Content: ${content}\n\nSubmitted by: ${email}`,
     };
