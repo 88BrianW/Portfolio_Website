@@ -29,7 +29,7 @@ async function saveFormData(formData) {
 */
 
 const Contact = () => {
-	const [formData, setFormData] = useState({
+	const [formData] = useState({
 		subject: "",
 		content: "",
 		email: "",
@@ -40,22 +40,22 @@ const Contact = () => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
-	};
+	// const handleChange = (e) => {
+	// 	const { name, value } = e.target;
+	// 	setFormData({ ...formData, [name]: value });
+	// };
 
-	const handleAttachmentChange = (e) => {
-		const fileInput = e.target;
-		const files = fileInput.files;
-		const fileNames = [];
-		for (let i = 0; i < files.length; i++) {
-			fileNames.push(files[i].name);
-		}
-		const fileNameDisplay = document.getElementById("file-name-display");
-		fileNameDisplay.textContent = fileNames.join(", ");
-		setFormData({ ...formData, attachments: files });
-	};
+	// const handleAttachmentChange = (e) => {
+	// 	const fileInput = e.target;
+	// 	const files = fileInput.files;
+	// 	const fileNames = [];
+	// 	for (let i = 0; i < files.length; i++) {
+	// 		fileNames.push(files[i].name);
+	// 	}
+	// 	const fileNameDisplay = document.getElementById("file-name-display");
+	// 	fileNameDisplay.textContent = fileNames.join(", ");
+	// 	setFormData({ ...formData, attachments: files });
+	// };
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -125,10 +125,12 @@ const Contact = () => {
 						I appreciate your desire to contact me! Please submit the forms below!
 					</div>
 
+
 					<br></br>
 					<br></br>
 
-					<div className="form-group">
+					
+					{/* <div className="form-group">
 						<label htmlFor="subject">Subject:</label>
 						<input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required />
 					</div>
@@ -149,7 +151,12 @@ const Contact = () => {
 						<div id="file-name-display" className="file-name-display"></div>
 					</div>
 
-					<button type="submit" className="submit-button">Submit</button>
+					<button type="submit" className="submit-button">Submit</button> */}
+
+					<div className="subtitle contact-subtitle">
+						Find my available platforms below. My main forms of communications are Gmail, Discord, and Instagram.
+					</div>
+
 					</form>
 				</div>
 

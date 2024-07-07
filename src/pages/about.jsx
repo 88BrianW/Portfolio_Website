@@ -36,7 +36,7 @@ const About = () => {
 								</div>
 
 								<div className="subtitle about-subtitle">
-									I'm Brian Wang, a junior high school student who aspires to be working on the computer science, cybersecurity, or video game design field. I started programming when I was in 7th grade, which equates to about 4 years. In addition to many projects, I also participate in many competitions, and do community service for many institutions. I was born in the US, and fluent in two languages: English and Chinese. On my family side, I have an older brother, and loving parents. As for my hobbies, I enjoy creating video games, working out, and playing volleyball (libero position)! In my free time, I often get lost in time creating programming projects, such as Project Agile, my video game creation.
+									I'm Brian Wang, a senior high school student who aspires to be working on the computer science/engineer, cybersecurity, or video game design field. I started programming when I was in 7th grade, which equates to about 4 years. In addition to many projects, I also participate in many competitions, and do community service for many institutions. I was born in the US, and fluent in two languages: English and Chinese. On my family side, I have an older brother, and loving parents. As for my hobbies, I enjoy creating video games, working out, and playing volleyball. In my free time, I often get lost in time creating programming projects, such as Project Agile, my video game creation.
 								</div>
 							</div>
 
