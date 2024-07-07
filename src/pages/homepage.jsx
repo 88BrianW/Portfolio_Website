@@ -69,11 +69,15 @@ const Homepage = () => {
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
 								<div className="title homepage-title">
-									Aspiring Game Developer & Programmer
+									Aspiring Game Developer & Computer Engineer
 								</div>
 
 								<div className="subtitle homepage-subtitle">
-									Hi! My name is Brian, otherwise known as "Harper" online. You may know me as the video game developer for Project Agile on Roblox, but I work on other projects as well! I'm currently a junior in high school, and plan on going to university after my senior year.
+									Hi! My name is Brian, otherwise known as "Harper" online. I am currently going into my senior year of highschool, and plan on going into college with the Computer Engineer major.
+								</div>
+
+								<div className="subtitle homepage-subtitle">
+									I am currently taking commissions for my Roblox video game. Also, I am working on a personal project called Project Agile, with over 60k views on YouTube.
 								</div>
 							</div>
 

@@ -19,6 +19,7 @@
 		"@testing-library/user-event": "^13.5.0",
 		"crypto-browserify": "^3.12.0",
 		"dotenv": "^16.4.5",
+		"fs": "^0.0.1-security",
 		"mongodb": "^6.5.0",
 		"net": "^1.0.2",
 		"nodemailer": "^6.9.13",
@@ -29,6 +30,7 @@
 		"react-router-dom": "^6.11.1",
 		"react-scripts": "^5.0.1",
 		"stream": "^0.0.2",
+		"tls": "^0.0.1",
 		"util": "^0.12.5",
 		"web-vitals": "^2.1.4"
 	},

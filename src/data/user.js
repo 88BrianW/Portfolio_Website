@@ -62,10 +62,18 @@ const INFO = {
 		{
 			title: "Leadership Legends",
 			description:
-				"Leadership Legends is a video game made for the FBLA video game design challenge, another project that was led by me. There were a total of 3 group members including me, but one of them didn't appear for the video we made. However, we introduced elements of the gameplay that we enjoyed making, and how we made the game itself. This video game was created on Godot, which was used for FBLA Connect+ as well.",
+				"Leadership Legends is a video game made for the FBLA video game design challenge, another project that was led by me. There were a total of 2 group members including me. We made it to 3rd in nationals for the FBLA National Leadership Conference. We introduced elements of the gameplay that we enjoyed making. This video game was created on Godot, which was used for FBLA Connect+ as well.",
 			logo: "leadership_legends.png",
 			linkText: "View Project",
 			link: "https://youtu.be/UsGhBugBi0Y",
+		},
+		{
+			title: "Food Image AI Predictor",
+			description:
+				"I created a Food Predictor AI algorithm using Google Colab, created using TensorFlow and Keras, featuring deep learning. This is a continuation to my mobile app, ChefLens. I utilized the Fruit Classification dataset of over 22,000 images by EDWARD ZHANG.",
+			logo: "https://uxwing.com/wp-content/themes/uxwing/download/fruits-vegetables/apple-fruits-icon.png",
+			linkText: "View Project",
+			link: "https://youtu.be/4OQpZkWD5eo",
 		},
 	],
 };
