@@ -121,14 +121,6 @@ const Contact = () => {
 					<form onSubmit={handleSubmit} className="contact-form">
 					<div className="title contact-title">Ways to Contact Me</div>
 
-					<div className="subtitle contact-subtitle">
-						I appreciate your desire to contact me! Please submit the forms below!
-					</div>
-
-
-					<br></br>
-					<br></br>
-
 					
 					{/* <div className="form-group">
 						<label htmlFor="subject">Subject:</label>
@@ -154,7 +146,7 @@ const Contact = () => {
 					<button type="submit" className="submit-button">Submit</button> */}
 
 					<div className="subtitle contact-subtitle">
-						Find my available platforms below. My main forms of communications are Gmail, Discord, and Instagram.
+						Find my available platforms below. My main forms of communications are Gmail and Discord.
 					</div>
 
 					</form>

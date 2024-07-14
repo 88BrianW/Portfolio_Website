@@ -29,7 +29,7 @@ const Projects = () => {
 					</div>
 					<div className="projects-container">
 						<div className="title projects-title">
-							7 of my Passion Projects
+							8 of my Passion Projects
 						</div>
 
 						<div className="subtitle projects-subtitle">
